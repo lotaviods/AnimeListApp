@@ -1,4 +1,4 @@
-angular.module('main').controller('CadastroController', function ($scope, $http, $timeout, $location) {
+angular.module('main').controller('cadastroController', function($scope, $http, $timeout, $location) {
 
     $scope.titulo = "Adição de contatos";
     $scope.message = "";
@@ -12,21 +12,14 @@ angular.module('main').controller('CadastroController', function ($scope, $http,
         'email': $scope.email,
         'numero': $scope.num
     };
-    $scope.cadastrar = function () {
+    $scope.cadastrar = function() {
         $http.post('http://localhost:8080/api/contatos/', $scope.data).success(res => {
             console.log(res);
-            $scope.transition = true;
-            $scope.message = 'CADASTRO EM CONSTRUÇÃO, FOI FEITO UM POST';
-            $timeout(f => {
-                $scope.transition = false;
-                $scope.message = 'CADASTRO EM CONSTRUÇÃO, FOI FEITO UM POST';
-            }, 5000)
         }).error(res => {
             console.log(res);
         })
     }
-    $scope.inicio = function(){
+    $scope.inicio = function() {
         $location.path("/");
     }
-    
-})
+});

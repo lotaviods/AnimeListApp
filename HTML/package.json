@@ -13,5 +13,9 @@
     "body-parser": "^1.12.3",
     "express": "^4.12.3",
     "nedb": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.8.0",
+    "jshint": "^2.12.0"
   }
 }

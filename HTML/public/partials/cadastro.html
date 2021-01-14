@@ -1,35 +1,28 @@
-
-<!-- REFATORAR -->
-<div class="alert alert-danger" ng-show="message" ng-class="{fadein: transition, fadeout: !transition}">
-    <!-- Mensagem-->
-    {{message}}
-</div>
-
 <form>
     <div class="container">
         <div class="form-group">
-              <div class="col col-sm-12 col-md-10">
-                    <div class="input-group  mb-3">
-                        <label class="col col-md-2" id="l_nome">Nome:</label>
-                        <input type="text" class="form-control" data-nome placeholder="Digite seu nome" />
-                    </div>
-              </div>
-        </div>
-
-        <div class="form-group">
-                <div class="col col-sm-12 col-md-10">
-                    <div class="input-group mb-3">
-                        <label class="col col-md-2"  id="l_email"> Email: </label>
-                        <input type="text" class="form-control" data-email placeholder="Digite seu email" />
-                    </div>
+            <div class="col col-sm-12 col-md-10">
+                <div class="input-group  mb-3">
+                    <label class="col col-md-2" id="l_nome">Nome:</label>
+                    <input type="text" class="form-control" ng-model="nome" placeholder="Digite seu nome" />
                 </div>
+            </div>
         </div>
 
         <div class="form-group">
             <div class="col col-sm-12 col-md-10">
                 <div class="input-group mb-3">
-                    <label class="col col-md-2"  id="l_numero">Numero: </label>
-                    <input type="text" class="form-control" data-num placeholder="Digite seu numero" />
+                    <label class="col col-md-2" id="l_email"> Email: </label>
+                    <input type="text" class="form-control" ng-model="email" placeholder="Digite seu email" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col col-sm-12 col-md-10">
+                <div class="input-group mb-3">
+                    <label class="col col-md-2" id="l_numero">Numero: </label>
+                    <input type="text" class="form-control" ng-model="num" placeholder="Digite seu numero" />
                 </div>
             </div>
         </div>
