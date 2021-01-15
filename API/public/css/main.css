@@ -64,7 +64,7 @@ body {
     100% {opacity:1;}
 }
 #contatos{
-    width:100%;
+    width:auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -83,7 +83,7 @@ body {
 }
 #tituloIndex{
     width: auto;
-    margin-left: 500px;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
     color: red !important;

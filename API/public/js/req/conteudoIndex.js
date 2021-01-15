@@ -29,20 +29,32 @@ function conteudo(pagina){
             addClasse(buttonEditar, ['btn', 'btn-primary']);
 
             buttonExcluir.addEventListener("click", f => {
-                let retornoConfirmacao = confirmacao()
-                console.log(retornoConfirmacao);
+                let retornoConfirmacao = confirmacao("Deseja excluir esse contato?")
+
                 if (retornoConfirmacao) {
                     excluir(i.id).then(suc => {
                         let removido = document.querySelector(`#id_contato_${i.id}`)
 
                         addClasse(removido, ['apaga']);
-                        console.log(removido);
+
                         setTimeout(function () {
                             removido.remove();
                         }, 500)
                     });
                 }
             });
+
+            buttonEditar.addEventListener("click", f=>{
+                let retornoConfimacao = confirmacao("Deseja editar esse contato?");
+
+                if (retornoConfimacao)
+                {
+                    let editado = document.querySelector(`#id_contato_${i.id}`)
+
+                    window.location.replace(`${i.id}`);
+
+                }
+            })
 
             td.appendChild(createText(i.nome));
             td2.appendChild(createText(i.email));
@@ -62,8 +74,8 @@ function conteudo(pagina){
     });
 }
 
-function confirmacao() {
-    if (confirm('Excluir esse contato?')) {
+function confirmacao(texto) {
+    if (confirm(texto)) {
         return true;
     }else{
         return false;

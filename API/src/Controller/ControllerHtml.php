@@ -19,4 +19,9 @@ class ControllerHtml extends AbstractController
         return $this->render('Index\cadastro.html.twig');
     }
 
+    public function editar()
+    {
+        return $this->render('Index\editar.html.twig');
+    }
+
 }

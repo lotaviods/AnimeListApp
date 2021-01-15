@@ -8,6 +8,12 @@ cadastro_HTML:
     controller: App\Controller\ControllerHtml::cadastrar
     methods: GET
 
+editar_HTML:
+    path: /{id}
+    controller: App\Controller\ControllerHtml::editar
+    methods: GET
+
+
 AddContato_API:
     path: /api/contatos/
     controller: App\Controller\ContatosController::NovoContato
