@@ -20,13 +20,7 @@ body {
 .list-group-item{
     background-color: lightslategray;
 }
-#contatos{
-    width:1300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    background: white;
-}
+
 .invisible{
     visibility: hidden;
 }
@@ -69,6 +63,13 @@ body {
     0% {opacity:0;}
     100% {opacity:1;}
 }
+#contatos{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    background: white;
+}
 #botaoExcluir{
     margin-top: 7px!important;
 }
@@ -81,15 +82,15 @@ body {
     transition: 0.5s;
 }
 #tituloIndex{
-    width:1300px;
+    width: auto;
     margin-left: 500px;
     margin-right: auto;
     margin-top: 0px;
     color: red !important;
 }
 #paginacao{
-    width:1500px;
-    margin-left: 550px;
+    width: 8em;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
     color: red !important;

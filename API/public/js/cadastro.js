@@ -3,9 +3,9 @@ import { adiciona } from "./req/creator.js";
 let elements = document.getElementsByTagName("input");
 
 const formCadastro = document.querySelector('[data-form]')
-    formCadastro.addEventListener("submit", event => {
-        event.preventDefault();
 
+formCadastro.addEventListener("submit", event => {
+        event.preventDefault();
         const nome = event.target.querySelector('[data-nome]');
         const email = event.target.querySelector('[data-email]');
         const num = event.target.querySelector('[data-num]');
