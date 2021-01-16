@@ -1,6 +1,6 @@
-angular.module('main').controller('indexController', ['$scope', '$rootScope', '$http', '$timeout', function($scope, $rootScope, $http, $timeout, listagemService) {
+angular.module('main').controller('indexController', ['$rootScope', function($rootScope) {
     $rootScope.transition = false;
     $rootScope.titulo = "Lista de Contatos";
     $rootScope.messageBox = "";
-
+    $rootScope.Pesquisa = true;
 }])

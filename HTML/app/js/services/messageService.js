@@ -1,4 +1,5 @@
 angular.module('main').service('messageService', ['$rootScope', '$timeout', function($rootScope, $timeout) {
+
     this.insereMensagem = function(message) {
         $rootScope.transition = true;
         $rootScope.messageBox = `${message}`;

@@ -1,9 +1,9 @@
-angular.module('main').controller('cadastroController', ['$scope', '$rootScope', '$http', '$timeout', '$location', 'cadastroService', function($scope, $rootScope, $http, $timeout, $location, cadastroService) {
+angular.module('main').controller('cadastroController', ['$scope', '$rootScope', '$location', 'cadastroService', function($scope, $rootScope, $location, cadastroService) {
     $rootScope.titulo = "Adição de contatos";
     $scope.nome = '';
     $scope.email = '';
     $scope.num = '';
-
+    $rootScope.Pesquisa = false;
     $scope.cadastrar = function() {
         $scope.data = {
             'nome': $scope.nome,
