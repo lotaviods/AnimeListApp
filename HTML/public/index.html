@@ -5,7 +5,10 @@
     <base href="/">
     <meta name="viewport" content="width=device-width">
     <title>Listagem de contatos</title>
+<<<<<<< HEAD
     <link rel="icon" type="image/png" href="image/contato.png">
+=======
+>>>>>>> c9cb4f1... criação de diretiva para verificação de exclusão e estilo novo
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -43,16 +46,20 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Opções
                         </a>
+
                         <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" ng-click="LinkGit()">Source code</a>
+
                         </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#"></a>
                     </li>
                 </ul>
+
                 <form class="form-inline my-2 my-lg-0" ng-show="pesquisa" ng-controller="pesquisaController">
                     <input class="form-control mr-sm-2 bg-dark" type="search" placeholder="Pesquisa" ng-model="search.text" aria-label="Pesquisa">
+
                 </form>
             </div>
         </nav>
