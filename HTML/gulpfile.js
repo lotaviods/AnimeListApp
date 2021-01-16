@@ -1,15 +1,12 @@
 const gulp = require('gulp');
-const terser = require('gulp-terser');
 const concat = require('gulp-concat');
-
-function es() {
-    return gulp.src(['app/js/*.js', 'app/js/services/*.js', 'app/js/controllers/*.js'])
+const terser = require('gulp-terser');
+gulp.task('dev', function() {
+    return gulp.src(['app/js/*.js', 'app/js/services/*.js', 'app/js/controllers/*.js']) // get source files with gulp.src
         .pipe(concat('all.js'))
         .pipe(terser({
             keep_fnames: false,
-            mangle: false
+            mangle: true
         }))
         .pipe(gulp.dest('public/js'));
-}
-
-gulp.task('default', es);
+});
