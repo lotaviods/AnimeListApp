@@ -3,4 +3,5 @@ angular.module('main').controller('indexController', ['$rootScope', function($ro
     $rootScope.titulo = "Lista de Contatos";
     $rootScope.messageBox = "";
     $rootScope.Pesquisa = true;
+
 }])

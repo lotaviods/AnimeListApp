@@ -6,8 +6,10 @@ angular.module('main').service('listagemService', ['$http', '$rootScope', 'messa
         }).success(resp => {
             $rootScope.resp = resp;
             $rootScope.contatos = $rootScope.resp.conteudoResposta;
+            if ($rootScope.contatos)
+                messageService.insereMensagem('Não existe nenhum contato');
         }).error(resp => {
-            messageService.insereMensagem('Ocorreu um erro na busca')
+            messageService.insereMensagem('Ocorreu um erro na busca');
         })
 
     }
