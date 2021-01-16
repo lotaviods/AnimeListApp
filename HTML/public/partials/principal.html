@@ -1,15 +1,30 @@
-<div class="container">
-    <table id="contatos">
-        <thead>
-            <tr class="table" id="contatos" ng-repeat="contato in contatos">
-                <th class="">{{contato.nome}}</th>
-                <th class="">{{contato.email}}</th>
-                <th class="">{{contato.numero}}</th>
-                <th><button id="id_contato={{contato.id}}" type="button" class="btn-s btn-danger" ng-click="excluir(contato.id)">X</button></th>
-            </tr>
-        </thead>
-    </table>
-</div>
-<div>
-
+<div class="contacts table" aria-labelledby="contacts-caption-text">
+    <span class="caption" id="contacts-caption-text">Lista de contato</span>
+    <div class="contacts-header thead">
+        <span class="th" id="th-name">Nome:</span>
+        <span class="th" id="th-phone">Numero:</span>
+        <span class="th" id="th-email">Email:</span>
+        <span class="th" id="th-contato"></span>
+    </div>
+    <ul class="tbody" ng-repeat="contato in contatos">
+        <li class="tr" id="idcontato{{contato.id}}">
+            <span class="td">
+          <span class="label">Nome:</span>
+            <span class="data" aria-labelledby="th-name">{{contato.nome}}</span>
+            </span>
+            <span class="td">
+          <span class="label">Numero:</span>
+            <span class="data" aria-labelledby="th-phone">{{contato.numero}}</span>
+            </span>
+            <span class="td">
+          <span class="label">Email:</span>
+            <span class="data" aria-labelledby="th-email"><a href="{{contato.email}}">{{contato.email}}</a></span>
+            </span>
+            <span class="label"></span>
+            <span class="data" aria-labelledby="th-contato">
+                <button type="button" class="btn-s btn-danger" ng-confirm-click="Tem certeza que gostaria de remover ?" confirmed-click="excluir(contato.id)">X</button></th>
+            </span>
+            <th>
+        </li>
+    </ul>
 </div>
