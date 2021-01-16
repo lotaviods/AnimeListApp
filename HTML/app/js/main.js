@@ -1,5 +1,5 @@
 angular.module("main", ['ngAnimate', 'ngRoute'])
-    .config(function($routeProvider, $locationProvider) {
+    .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
         $locationProvider.html5Mode(true);
         $routeProvider.when('/', {
             templateUrl: 'partials/principal.html',
@@ -12,4 +12,5 @@ angular.module("main", ['ngAnimate', 'ngRoute'])
         $routeProvider.otherwise({
             redirectTo: '/'
         });
-    });
+
+    }]);

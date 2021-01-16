@@ -1,1 +1,0 @@
-angular.module('main').controller('indexController', function($scope, messageService) {});

@@ -1,21 +1,25 @@
 {
-  "name": "listacontatos",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.12.3",
-    "express": "^4.12.3",
-    "nedb": "^1.1.2"
-  },
-  "devDependencies": {
-    "@types/angular": "^1.8.0",
-    "jshint": "^2.12.0"
-  }
+    "name": "listacontatos",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.12.3",
+        "express": "^4.12.3",
+        "nedb": "^1.1.2"
+    },
+    "devDependencies": {
+        "@types/angular": "^1.8.0",
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-terser": "^2.0.1",
+        "gulp-uglifyes": "^0.2.1",
+        "jshint": "^2.12.0"
+    }
 }
