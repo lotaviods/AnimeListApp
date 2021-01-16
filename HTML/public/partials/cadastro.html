@@ -1,0 +1,36 @@
+<div class="cadastroForm">
+    <form>
+        <div class="container">
+            <div class="form-group">
+                <div class="col col-sm-12 col-md-10">
+                    <div class="input-group  mb-3">
+                        <label class="col col-md-2" id="l_nome">Nome:</label>
+                        <input type="text" class="form-control" ng-model="nome" placeholder="Digite seu nome" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col col-sm-12 col-md-10">
+                    <div class="input-group mb-3">
+                        <label class="col col-md-2" id="l_email"> Email: </label>
+                        <input type="text" class="form-control" ng-model="email" placeholder="Digite seu email" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col col-sm-12 col-md-10">
+                    <div class="input-group mb-3">
+                        <label class="col col-md-2" id="l_numero">Numero: </label>
+                        <input type="text" class="form-control" ng-model="num" placeholder="Digite seu numero" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="enviarForm">
+                <button class="btn btn-primary enviar_form" ng-click="cadastrar()">Enviar</button>
+                <button class="btn btn-primary enviar_form" ng-click="inicio()">Voltar</button>
+            </div>
+        </div>
+    </form>
+</div>
