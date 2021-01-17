@@ -5,6 +5,7 @@ angular.module('main').controller('editaController', ['$scope', '$rootScope', '$
     $scope.email = '';
     $scope.num = '';
     listagemService.listagem($scope.id);
+
     $rootScope.$on("success", function(event, data) {
         //console.log(data);
         $scope.nome = $rootScope.contatos.nome;
