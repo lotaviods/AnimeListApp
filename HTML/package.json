@@ -17,7 +17,9 @@
     "devDependencies": {
         "@types/angular": "^1.8.0",
         "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
         "gulp-concat": "^2.6.1",
+        "gulp-sourcemaps": "^3.0.0",
         "gulp-terser": "^2.0.1",
         "gulp-uglifyes": "^0.2.1",
         "jshint": "^2.12.0"
