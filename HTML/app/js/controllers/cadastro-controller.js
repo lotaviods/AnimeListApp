@@ -3,7 +3,7 @@ angular.module('main').controller('cadastroController', ['$scope', '$rootScope',
     $scope.nome = '';
     $scope.email = '';
     $scope.num = '';
-    $rootScope.Pesquisa = false;
+    $rootScope.pesquisa = false;
     $scope.cadastrar = function() {
         $scope.data = {
             'nome': $scope.nome,

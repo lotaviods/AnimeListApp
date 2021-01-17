@@ -4,9 +4,7 @@ angular.module('main').controller('indexController', ['$rootScope', 'messageServ
     $rootScope.messageBox = "";
     $rootScope.Pesquisa = true;
 
-    $scope.Search = function() {
-        messageService.insereMensagem('Não adicionada função Pesquisar');
-    }
+
     $scope.LinkGit = function() {
         window.open('https://github.com/FullCLprojetos/ListaDeContatos');
     }

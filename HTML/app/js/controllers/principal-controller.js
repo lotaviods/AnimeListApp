@@ -1,7 +1,6 @@
 angular.module('main').controller('principalController', ['$rootScope', '$scope', 'listagemService', 'deletaService', function($rootScope, $scope, listagemService, deletaService) {
     $rootScope.titulo = "Lista de Contatos";
-    $rootScope.Pesquisa = true;
-
+    $rootScope.pesquisa = true;
     listagemService.listagem();
 
     $scope.excluir = function(id) {
