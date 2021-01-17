@@ -5,8 +5,6 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('js', function() {
-
-
     return gulp.src(['app/*.js', 'app/services/*.js', 'app/directives/*.js', 'app/controllers/*.js'])
         .pipe(concat('all.js'))
         .pipe(sourcemaps.init())
