@@ -5,7 +5,10 @@ angular.module('main').controller('editaController', ['$scope', '$rootScope', '$
     $scope.email = '';
     $scope.num = '';
     listagemService.listagem($scope.id);
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7a2041... ADição de menu de edição e funcionalidade da mesma
     $rootScope.$on("success", function(event, data) {
         //console.log(data);
         $scope.nome = $rootScope.contatos.nome;
