@@ -19,8 +19,11 @@
 -
         cd .\HTML\
 -
+        gulp css
+-
+        gulp js
+-       
         npm start
-
 
 ### Documentação Api:
         Métodos:  
@@ -34,6 +37,10 @@
         POST:
             localhost:8080/api/contatos
                 - Cria um contato específico.
+        
+        PUT:
+            localhost:8080/api/contatos/{id}
+                - Edita um contato específico.  
 
         DELETE:
             localhost:8080/api/contatos/{id}
