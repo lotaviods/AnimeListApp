@@ -98,6 +98,7 @@ body {
     background-color: #000000;
     color: black;
     display: block;
+
 }
 
 #table_contatos {
@@ -145,6 +146,7 @@ body {
 span button {
     display: inline-block;
     margin-bottom: 0;
+
     width: 150px;
     font-weight: normal;
     text-align: center;
@@ -168,6 +170,7 @@ span button {
 
 .enviar_form {
     position: relative;
+
     left: auto;
     margin: auto;
     align-items: center;
@@ -374,5 +377,5 @@ span button {
 
 #placeHolder {
     display: inline-block;
-    padding: 1rem;
 }
+/*# sourceMappingURL=main.css.map */
