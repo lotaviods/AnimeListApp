@@ -1,5 +1,4 @@
 <div class="contacts table" aria-labelledby="contacts-caption-text">
-    <span class="caption" id="contacts-caption-text">Lista de contato</span>
     <div class="contacts-header thead">
         <span class="th" id="th-name">Nome:</span>
         <span class="th" id="th-phone">Numero:</span>
@@ -22,9 +21,9 @@
             </span>
             <span class="label"></span>
             <span class="data" aria-labelledby="th-contato">
-                <button type="button" class="btn-s btn-danger" ng-confirm-click="Tem certeza que gostaria de remover ?" confirmed-click="excluir(contato.id)">X</button></th>
+                <button type="button" class="btn-s btn-danger" ng-confirm-click="Tem certeza que gostaria de remover ?" confirmed-click="excluir(contato.id)">Excluir</button></th>
+                <button type="button" class="btn-s btn-primary" ng-click="edita(contato.id)">Editar</button></th>
             </span>
-            <th>
         </li>
     </ul>
 </div>

@@ -7,4 +7,4 @@ angular.module('main').service('cadastroService', ['$http', 'messageService', fu
             messageService.insereMensagem(`Cadastro falhou: ${res.conteudoResposta.mensagem}`);
         })
     }
-}])
+}]);

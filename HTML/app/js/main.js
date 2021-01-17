@@ -6,11 +6,16 @@ angular.module("main", ['ngAnimate', 'ngRoute'])
             controller: 'principalController'
         });
         $routeProvider.when('/cadastro', {
-            templateUrl: 'partials/cadastro.html',
+            templateUrl: 'partials/cadastroForm.html',
             controller: 'cadastroController'
-        })
+        });
+        $routeProvider.when('/edita/:id', {
+            templateUrl: 'partials/editaForm.html',
+            controller: 'editaController'
+        });
         $routeProvider.otherwise({
             redirectTo: '/'
         });
+
 
     }]);

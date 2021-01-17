@@ -7,5 +7,8 @@ angular.module('main').controller('principalController', ['$rootScope', '$scope'
     $scope.excluir = function(id) {
         deletaService.deleta(id);
     }
+    $scope.edita = function(id) {
+        window.location.replace(`/edita/${id}`)
+    }
 
 }])
