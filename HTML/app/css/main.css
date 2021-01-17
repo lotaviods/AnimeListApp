@@ -97,6 +97,7 @@ body {
     margin-top: 15%;
     background-color: #000000;
     color: black;
+    display: block;
 }
 
 #table_contatos {
@@ -168,7 +169,7 @@ span button {
 
 .enviar_form {
     position: relative;
-    left: 30px;
+    left: auto;
     margin: auto;
     align-items: center;
     border: 3px solid #000000;
@@ -370,4 +371,9 @@ span button {
 .contatos {
     opacity: 0;
     transition: 0.5s;
+}
+
+#placeHolder {
+    display: inline-block;
+    padding: 1rem;
 }

@@ -8,5 +8,4 @@ angular.module('main').controller('indexController', ['$rootScope', 'messageServ
     $scope.LinkGit = function() {
         window.open('https://github.com/FullCLprojetos/ListaDeContatos');
     }
-
 }])
