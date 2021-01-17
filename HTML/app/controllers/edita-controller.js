@@ -32,7 +32,8 @@ angular.module('main').controller('editaController', ['$scope', '$rootScope', '$
     $scope.inicio = function() {
         $location.path("/");
     }
-    $scope.makeQr = function() {
+
+$scope.makeQr = function() {
         let qr = qrcode(0, 'M');
         let data = {
             'nome': $scope.nome,
@@ -45,4 +46,5 @@ angular.module('main').controller('editaController', ['$scope', '$rootScope', '$
         qr.make();
         document.getElementById('placeHolder').innerHTML = qr.createImgTag();
     }
+
 }])

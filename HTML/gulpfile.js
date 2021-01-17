@@ -5,11 +5,9 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('js', function() {
-<<<<<<< HEAD
+
+
     return gulp.src(['app/*.js', 'app/services/*.js', 'app/directives/*.js', 'app/controllers/*.js'])
-=======
-    return gulp.src(['app/js/*.js', 'app/js/services/*.js', 'app/js/directives/*.js', 'app/js/controllers/*.js']) // get source files with gulp.src
->>>>>>> 9e7225d... Adição de mimificação de css com gulp
         .pipe(concat('all.js'))
         .pipe(sourcemaps.init())
         .pipe(terser({
