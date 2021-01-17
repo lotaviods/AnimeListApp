@@ -4,7 +4,6 @@ angular.module('main').controller('editaController', ['$scope', '$rootScope', '$
     $scope.nome = '';
     $scope.email = '';
     $scope.num = '';
-
     listagemService.listagem($scope.id);
 
     $rootScope.$on("success", function(event, data) {
@@ -33,7 +32,7 @@ angular.module('main').controller('editaController', ['$scope', '$rootScope', '$
         $location.path("/");
     }
 
-$scope.makeQr = function() {
+    $scope.makeQr = function() {
         let qr = qrcode(0, 'M');
         let data = {
             'nome': $scope.nome,
