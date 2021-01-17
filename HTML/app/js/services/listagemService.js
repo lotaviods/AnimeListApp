@@ -7,7 +7,6 @@ angular.module('main').service('listagemService', ['$http', '$rootScope', 'messa
         }).success(resp => {
             $rootScope.resp = resp;
             $rootScope.contatos = $rootScope.resp.conteudoResposta;
-
             if ($rootScope.contatos == null) {
                 messageService.insereMensagem('Não foi possivél efetuar a busca');
                 return;
@@ -15,7 +14,6 @@ angular.module('main').service('listagemService', ['$http', '$rootScope', 'messa
             if (resp.conteudoResposta.length == 0)
                 messageService.insereMensagem('Não encontramos nenhum contato');
             $rootScope.$broadcast("success", resp);
-
         }).error(resp => {
             messageService.insereMensagem('Ocorreu um erro na busca');
         })
