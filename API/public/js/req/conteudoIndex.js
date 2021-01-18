@@ -19,6 +19,7 @@ function conteudo(pagina){
             let td = createElement('td');
             let td2 = createElement('td');
             let td3 = createElement('td');
+            let td4 = createElement('td');
 
             let buttonExcluir = createElement('button');
             addId(buttonExcluir, "botaoExcluir");
@@ -55,17 +56,28 @@ function conteudo(pagina){
 
                 }
             })
-
+            let qr = qrcode(0,"M");
             td.appendChild(createText(i.nome));
             td2.appendChild(createText(i.email));
             td3.appendChild(createText(i.numero));
             buttonExcluir.appendChild(createText("X"));
             buttonEditar.appendChild(createText("Edit"))
 
+            let data = {
+                'nome': i.nome,
+                'email': i.email,
+                'numero': i.numero
+            }
+            let json = JSON.stringify(data);
+            qr.addData(json);
+            qr.make();
+
+            td4.innerHTML = qr.createImgTag();
 
             addNoElement(tr, td);
             addNoElement(tr, td2);
             addNoElement(tr, td3);
+            addNoElement(tr, td4);
             addNoElement(tr, buttonExcluir);
             addNoElement(tr, buttonEditar);
             console.log(tr);
