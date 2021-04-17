@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Learning Kotlin</string>
+    <string name="Change_btn">Change item</string>
+    <string name="Reset_btn">Reset item count</string>
+    <string name="DefaultItem">Click to start counting</string>
+    <string name="NewText">Clicked %1s times</string>
+    <string name="HintNome">Name</string>
+    <string name="HintTelefone">Number</string>
+    <string name="HintEmail">Email</string>
+    <string name="ButtonSave">Save</string>
+    <string name="ButtonOpenForm">Open form</string>
+    <string name="ButtonOpenList">Open ListForm</string>
+    <string name="Upcoming">Not implemented yet</string>
+    <string name="email">Email:</string>
+    <string name="nome">Nome:</string>
+</resources>
