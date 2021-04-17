@@ -2,11 +2,12 @@ package com.lotaviods.fullclprojects.listadecontato.ui.mainactivity
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.teste.ui.mainactivity.adapter.ContatoAdapter
-import com.example.teste.ui.mainactivity.viewModel.ContatoViewModel
 import com.lotaviods.fullclprojects.listadecontato.R
+import com.lotaviods.fullclprojects.listadecontato.ui.mainactivity.viewModel.ContatoViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -33,10 +34,18 @@ class MainActivity : AppCompatActivity() {
             swipeContainer.isRefreshing = false
             Log.i("API", "Dados recebidos")
             contato_recyclerview.apply {
-                layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
+                layoutManager =
+                    LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
                 adapter = ContatoAdapter(this.context, data.conteudoResposta)
             }
         })
+
+        viewModel.erro.observe(this, {
+            swipeContainer.isRefreshing = false
+            contato_recyclerview.adapter = null
+            Toast.makeText(this,it, Toast.LENGTH_SHORT).show()
+        })
     }
+
 
 }
