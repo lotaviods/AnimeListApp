@@ -1,4 +1,4 @@
-package com.lotaviods.FullCLProjects.ListaDeContato.model
+package com.lotaviods.fullclprojects.listadecontato.model
 
 import com.google.gson.Gson
 import okhttp3.OkHttpClient

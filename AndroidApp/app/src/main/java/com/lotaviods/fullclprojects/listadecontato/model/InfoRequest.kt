@@ -1,4 +1,4 @@
-package com.lotaviods.FullCLProjects.ListaDeContato.model
+package com.lotaviods.fullclprojects.listadecontato.model
 
 import com.google.gson.annotations.SerializedName
 

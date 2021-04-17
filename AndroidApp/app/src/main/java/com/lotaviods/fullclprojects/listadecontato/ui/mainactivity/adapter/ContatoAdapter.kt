@@ -5,8 +5,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.lotaviods.FullCLProjects.ListaDeContato.R
-import com.lotaviods.FullCLProjects.ListaDeContato.model.Contato
+import com.lotaviods.fullclprojects.listadecontato.R
+import com.lotaviods.fullclprojects.listadecontato.model.Contato
 
 class ContatoAdapter(private val context: Context?, private val contatos : List<Contato>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 

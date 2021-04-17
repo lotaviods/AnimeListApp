@@ -1,17 +1,13 @@
-package com.lotaviods.FullCLProjects.ListaDeContato.ui.mainactivity
+package com.lotaviods.fullclprojects.listadecontato.ui.mainactivity
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.teste.ui.mainactivity.adapter.ContatoAdapter
 import com.example.teste.ui.mainactivity.viewModel.ContatoViewModel
-import com.lotaviods.FullCLProjects.ListaDeContato.R
-import com.lotaviods.FullCLProjects.ListaDeContato.model.Contato
+import com.lotaviods.fullclprojects.listadecontato.R
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
-import kotlin.concurrent.schedule
 
 
 class MainActivity : AppCompatActivity() {
