@@ -20,14 +20,17 @@ class MainActivity : AppCompatActivity() {
 
         configuraObserver()
 
-        viewModel.procuraAluno()
-
         swipeContainer.setOnRefreshListener {
             viewModel.procuraAluno()
         }
 
     }
 
+    override fun onResume() {
+        swipeContainer.isRefreshing = true
+        viewModel.procuraAluno()
+        super.onResume()
+    }
     private fun configuraObserver() {
 
         viewModel.contato.observe(this, { data ->
