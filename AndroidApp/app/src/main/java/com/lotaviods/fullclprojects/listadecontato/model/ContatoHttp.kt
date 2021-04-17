@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit
 import kotlin.coroutines.coroutineContext
 
 object ContatoHttp {
-private const val URL = "http://10.0.2.2:8080/api/contatos/"
+private const val URL = "http://10.0.2.2:8080/api/contatos/?itensPorPagina=9999999"
     private val client =  OkHttpClient().newBuilder()
         .readTimeout(10, TimeUnit.SECONDS)
         .connectTimeout(5, TimeUnit.SECONDS)
