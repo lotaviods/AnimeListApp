@@ -7,7 +7,8 @@ import java.lang.Exception
 import java.util.concurrent.TimeUnit
 
 object AnimeHttp {
-private const val URL = "http://192.168.86.52:3001/api/anime"
+private const val URL = "https://lotaviodsanimelist.herokuapp.com/api/anime"
+    //https://lotaviods.netlify.app/.netlify/functions/api/anime
     private val client =  OkHttpClient().newBuilder()
         .readTimeout(10, TimeUnit.SECONDS)
         .connectTimeout(5, TimeUnit.SECONDS)

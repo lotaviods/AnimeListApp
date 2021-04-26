@@ -37,8 +37,7 @@ class MainActivity : AppCompatActivity() {
             swipeContainer.isRefreshing = false
             Log.i("API", "Data recived")
             contato_recyclerview.apply {
-                layoutManager =
-                    LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
+                layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
                 adapter = AnimeAdapter(this.context, data.AnimeList)
             }
         })

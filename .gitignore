@@ -4,3 +4,6 @@ app/src/.DS_Store
 gradle/.DS_Store
 build/
 app/release
+.gradle
+.DS_Strore
+.gradle/6.5/vcsMetadata-1/
