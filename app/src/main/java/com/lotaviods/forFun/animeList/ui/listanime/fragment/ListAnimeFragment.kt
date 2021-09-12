@@ -27,9 +27,16 @@ class ListAnimeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        configuraSwipe()
         initializeObserver()
         configButtons()
         viewModel.searchAnimes()
+    }
+
+    private fun configuraSwipe() {
+        swipeContainer.setOnRefreshListener {
+            viewModel.searchAnimes()
+        }
     }
 
     private fun configButtons() {
