@@ -2,7 +2,6 @@ package com.lotaviods.forFun.animeList.ui.listanime.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.lotaviods.forFun.animeList.model.AnimeHttp
 import com.lotaviods.forFun.animeList.model.InfoRequest
 import com.lotaviods.forFun.animeList.repository.AnimeRepository
 import kotlinx.coroutines.CoroutineScope
@@ -11,9 +10,10 @@ import kotlinx.coroutines.launch
 
 class AnimeViewModel() :
     ViewModel() {
-    val repository: AnimeRepository = AnimeRepository()
+    private val repository: AnimeRepository = AnimeRepository()
     val anime = MutableLiveData<InfoRequest>()
     val erro = MutableLiveData<String>()
+    private val comandoResposta = MutableLiveData<Boolean>()
 
     fun searchAnimes() {
 
@@ -27,5 +27,21 @@ class AnimeViewModel() :
             }
 
         }
+    }
+    fun removeAnime(name: String?):MutableLiveData<Boolean> {
+        val viewModelScope = CoroutineScope(context = Dispatchers.IO)
+        viewModelScope.launch {
+            if (name != null) {
+                val resposta = repository.removeAnime(name)
+
+                if (resposta == true){
+                    comandoResposta.postValue(true)
+                }else{
+                    erro.postValue("Erro ao excluir")
+                }
+
+            }
+        }
+        return comandoResposta
     }
 }

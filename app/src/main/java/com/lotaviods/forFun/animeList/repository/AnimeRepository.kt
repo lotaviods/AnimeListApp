@@ -10,4 +10,7 @@ class AnimeRepository {
     fun postaAnime(nome: String): Boolean? {
         return AnimeHttp.postaAnime(nome = nome)
     }
+    fun removeAnime(nome: String): Boolean?{
+        return AnimeHttp.removeAnime(nome = nome)
+    }
 }

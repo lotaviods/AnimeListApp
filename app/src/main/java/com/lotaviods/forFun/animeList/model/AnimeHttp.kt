@@ -47,5 +47,23 @@ object AnimeHttp {
         }
     }
 
+    fun removeAnime(nome: String): Boolean? {
+        return try {
+            val json = """
+                {
+                    "name": "$nome"
+                }
+            """.trimIndent()
+            val body = json.toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
+
+            val request = Request.Builder().url(URL).delete(body).build()
+
+            val response = client.newCall(request).execute()
+            return response.isSuccessful
+        } catch (e: Exception) {
+            null
+        }
+    }
+
 
 }
