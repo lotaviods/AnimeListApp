@@ -33,6 +33,7 @@ android {
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField('String', 'API_URL', '"https://lotaviodsanimelist.herokuapp.com/api/anime/"')
     }
 
     buildTypes {
