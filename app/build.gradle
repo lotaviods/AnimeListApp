@@ -1,0 +1,167 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
+
+    buildFeatures {
+
+        dataBinding true
+        // for view binding:
+        viewBinding true
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    packagingOptions {
+        // for JNA and JNA-platform
+        exclude "META-INF/AL2.0"
+        exclude "META-INF/LGPL2.1"
+        // for byte-buddy
+        exclude "META-INF/licenses/ASM"
+        pickFirst "win32-x86-64/attach_hotspot_windows.dll"
+        pickFirst "win32-x86/attach_hotspot_windows.dll"
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.1"
+    }
+    defaultConfig {
+        applicationId "com.lotaviods.forFun.animeList"
+        minSdkVersion 23
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0-alpha"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField('String', 'API_URL', System.getenv("ANIME_API"))
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+ext.koin_version = "3.1.3"
+def nav_version = "2.4.2"
+dependencies {
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    implementation 'com.google.firebase:firebase-firestore:24.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.0.3'
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.9'
+    implementation 'com.google.firebase:firebase-analytics:20.1.2'
+    implementation 'com.google.firebase:firebase-perf'
+    implementation 'com.google.android.gms:play-services-basement:18.0.1'
+
+    //tests
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
+    //lifeCycle
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    //Retrofit
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
+
+    //Androidx
+
+    implementation 'androidx.navigation:navigation-runtime-ktx:2.4.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.activity:activity-ktx:1.4.0"
+    implementation "androidx.multidex:multidex:2.0.1"
+    // Navigation
+
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Coil for loading images with compose
+    implementation("io.coil-kt:coil-compose:2.0.0-rc01")
+
+    // Koin for Kotlin apps
+    implementation "io.insert-koin:koin-android:$koin_version"
+
+
+    // Testing
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+
+    // Jetpack compose
+    implementation "androidx.compose.ui:ui-tooling:1.1.1"
+    implementation "com.google.accompanist:accompanist-swiperefresh:0.24.6-alpha"
+    implementation "androidx.navigation:navigation-compose:$nav_version"
+
+    implementation 'androidx.compose.ui:ui:1.1.1'
+    // Tooling support (Previews, etc.)
+    implementation 'androidx.compose.ui:ui-tooling:1.1.1'
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation 'androidx.compose.foundation:foundation:1.1.1'
+    // Material Design
+    implementation 'androidx.compose.material:material:1.1.1'
+    // Material design icons
+    implementation 'androidx.compose.material:material-icons-core:1.1.1'
+    implementation 'androidx.compose.material:material-icons-extended:1.1.1'
+    // Integration with activities
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    // Integration with ViewModels
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0-alpha06'
+    // Integration with observables
+    implementation 'androidx.compose.runtime:runtime-livedata:1.1.1'
+    implementation 'androidx.compose.runtime:runtime-rxjava2:1.1.1'
+
+    // UI Tests
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.1.1'
+}

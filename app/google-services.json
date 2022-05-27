@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "57897116327",
+    "project_id": "listadecontatos-34081",
+    "storage_bucket": "listadecontatos-34081.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57897116327:android:6089a4f56b32acd44f3182",
+        "android_client_info": {
+          "package_name": "com.lotaviods.forFun.animeList"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57897116327-iir236rt5j4ahbu4p52d87o4l8bojl1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOHLyOUY3uEUO5bWvtYWNXLwKbzTw5MIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57897116327-iir236rt5j4ahbu4p52d87o4l8bojl1o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57897116327:android:62aec634da69762f4f3182",
+        "android_client_info": {
+          "package_name": "com.lotaviods.fullclprojects"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57897116327-iir236rt5j4ahbu4p52d87o4l8bojl1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOHLyOUY3uEUO5bWvtYWNXLwKbzTw5MIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57897116327-iir236rt5j4ahbu4p52d87o4l8bojl1o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
